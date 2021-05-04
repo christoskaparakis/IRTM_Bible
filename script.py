@@ -113,26 +113,25 @@ def unigrams(data, plot=True):
     df_NT_unigrams = pd.DataFrame(sorted(NT_unigrams.items(), key=lambda x: x[1])[::-1])
     df_OT_unigrams = pd.DataFrame(sorted(OT_unigrams.items(), key=lambda x: x[1])[::-1])
 
-    if plot:
-        fig, axes = plt.subplots(ncols=2, figsize=(12, 10), dpi=80)
-        plt.tight_layout()
+    fig, axes = plt.subplots(ncols=2, figsize=(12, 10), dpi=80)
+    plt.tight_layout()
 
-        N = 25
+    N = 25
 
-        sns.barplot(y=df_NT_unigrams[0].values[:N], x=df_NT_unigrams[1].values[:N], ax=axes[0], color='red')
-        sns.barplot(y=df_OT_unigrams[0].values[:N], x=df_OT_unigrams[1].values[:N], ax=axes[1], color='green')
+    sns.barplot(y=df_NT_unigrams[0].values[:N], x=df_NT_unigrams[1].values[:N], ax=axes[0], color='red')
+    sns.barplot(y=df_OT_unigrams[0].values[:N], x=df_OT_unigrams[1].values[:N], ax=axes[1], color='green')
 
-        for i in range(2):
-            axes[i].spines['right'].set_visible(False)
-            axes[i].set_xlabel('')
-            axes[i].set_ylabel('')
-            axes[i].tick_params(axis='x', labelsize=10)
-            axes[i].tick_params(axis='y', labelsize=10)
+    for i in range(2):
+        axes[i].spines['right'].set_visible(False)
+        axes[i].set_xlabel('')
+        axes[i].set_ylabel('')
+        axes[i].tick_params(axis='x', labelsize=10)
+        axes[i].tick_params(axis='y', labelsize=10)
 
-        axes[0].set_title(f'Top {N} most common unigrams in New Testament', fontsize=10)
-        axes[1].set_title(f'Top {N} most common unigrams in Old Testament', fontsize=10)
+    axes[0].set_title(f'Top {N} most common unigrams in New Testament', fontsize=10)
+    axes[1].set_title(f'Top {N} most common unigrams in Old Testament', fontsize=10)
 
-        plt.show()
+    plt.show()
 
 
 def bigrams(data):

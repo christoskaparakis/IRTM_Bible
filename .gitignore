@@ -2,3 +2,7 @@
 .idea/
 
 venv/
+
+.env/
+
+testing.py
