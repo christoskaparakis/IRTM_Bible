@@ -6,3 +6,5 @@ venv/
 .env/
 
 testing.py
+
+__pycache__/
