@@ -1,5 +1,6 @@
 from os import path
 import pandas as pd
+<<<<<<< Updated upstream
 # import spacy
 # import matplotlib.pyplot as plt
 # import seaborn as sns
@@ -15,6 +16,12 @@ import pandas as pd
 from preprocessing import preprocess
 from visualisation import freq_barplot, unigrams, bigrams, trigrams, sentiment_hist
 from barchartrace import bar_chart_race
+=======
+import spacy
+import matplotlib.pyplot as plt
+
+from spacytextblob.spacytextblob import SpacyTextBlob
+>>>>>>> Stashed changes
 
 pd.options.mode.chained_assignment = None  # default='warn'
 
