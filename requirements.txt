@@ -1,0 +1,7 @@
+flair
+seaborn
+pyyaml
+keras
+tf-models-official
+pydot graphviz
+tensorflow_hub
